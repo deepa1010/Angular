@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 	90%;
+  padding: 	12px 20px;
+  margin: 	6px 0;
+  display: 	inline-block;
+  border: 	1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: 	border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: silver;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+ border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+
+<div>
+  <form action="addnew.jsp">
+  <tr>
+<td>Registration Date:</td>		<td><input type="date" name="regDate"></td>
+</tr>
+<br> <tr><td>Description:	</td><td>	<input type="text" name="description"></td></tr>
+
+<br> Priority: <select name="priority">
+<option selected="selected">---select---</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select>
+<br>
+validity start date:
+<input type="date" name="vsd"> 
+<br>
+validity end date:
+<input type="date" name="ved"> 
+<br> assigned To:		<select name="assigned">
+<option selected="selected">---select---</option>
+<option value="Recruiter 1">Recruiter 1</option>
+<option value="Recruiter 2">Recruiter 2</option>
+<option value="Team leader">Team leader </option>
+</select>
+<br>
+<br> <input type="submit" value="submit">
+  </form>
+</div>
+
+</body>
+</html>
