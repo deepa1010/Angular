@@ -1,0 +1,33 @@
+<div class="container">
+  <h4 class="text-center">Contact List</h4>
+  <table class="table table-striped table-bordered">
+    <thead class="bg-info">
+      <tr>
+        <th>Contact #</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email Id</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of contactList">
+        <td>{{c.contactId}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.mobileNumber}}</td>
+        <td>{{c.emaiId}}</td>
+        <td><a [routerLink] ="['/edit',c.contactId]" class="fa fa-pencil" aria-hidden="true"> edit</a></td>
+        <td><a  [routerLink] ="['/delete',c.contactId]" class="fa fa-trash" aria-hidden="true"> delete</a></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="bg-info text-center">
+        <td colspan="4">No. of Contacts : <strong>{{size}}</strong></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+  
+</div>
